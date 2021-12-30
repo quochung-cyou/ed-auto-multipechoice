@@ -12,55 +12,45 @@
     'use strict';
 
     function doSomething() {
+    //Du doan dap an dung
     var elements = document.querySelectorAll('[for="question-1_answer-1"]');
         for(var i = 0; i < elements.length; i++){
             elements[i].setAttribute("style", "background-color: green;");
             elements[i].checked = true;
 
         }
+    //Auto pick trong practice abcd
     elements = document.querySelectorAll('[for="question-1_answer-2"]');
         for(i = 0; i < elements.length; i++){
             elements[i].setAttribute("style", "background-color: orange;");
             elements[i].click();
         }
+      //Auto pick trong practice abcd neu co 2 cau hoi
        elements = document.querySelectorAll('[for="question-2_answer-5"]');
         for(i = 0; i < elements.length; i++){
             elements[i].setAttribute("style", "background-color: orange;");
-            elements[i].checked = true;
             elements[i].click();
         }
+       //Auto pick trong practice abcd neu co 3 cau hoi
         elements = document.querySelectorAll('[for="question-3_answer-7"]');
         for(i = 0; i < elements.length; i++){
             elements[i].setAttribute("style", "background-color: orange;");
-            elements[i].checked = true;
             elements[i].click();
         }
+        //Auto pick loai nhieu dap an
         elements = document.querySelectorAll('[type="checkbox"]');
 
         for(i = 0; i < elements.length; i++){
-            elements[i].setAttribute("style", "background-color: orange;");
-           elements[i].checked = true; //prOpenEnded__qaItem_inputW
+           elements[i].checked = true; 
 
         } //
+        
+        //Tu bat listening trong bai explore
         elements = document.querySelectorAll('[class="layout__mediaPlayPause layout__mediaPlayPause--play CTrackerPlayBtnD"]');
 
         for(i = 0; i < elements.length; i++){
             elements[i].click();
 
-        }
-        elements = document.querySelectorAll('[class="DDLOptions__selected"]');
-
-        for(i = 0; i < elements.length; i++){
-            elements[i].setAttribute("id", "DDLOptions__selected_aid_13");
-
-        }
-         elements = document.querySelectorAll('[class="prOpenEnded__qaItem_inputW"]');
-        for(i = 0; i < elements.length; i++){
-            elements[i].setAttribute("class", "prOpenEnded__qaItem_inputW prOpenEnded__qaItem_inputW--vCheck");
-        }
-        elements = document.querySelectorAll('[class="prOpenEnded__qaItemText prOpenEnded__qaItemText--input ng-valid ng-dirty ng-touched"]');
-        for(i = 0; i < elements.length; i++){
-            elements[i].setAttribute("ng-reflect-model", "a");
         }
     } setInterval(doSomething, 100);
 })();
